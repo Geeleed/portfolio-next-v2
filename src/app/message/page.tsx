@@ -18,7 +18,7 @@ export default function Message() {
         title: senderRef.current?.value,
         text: msgRef.current?.value,
       };
-      fetch(SEND_MSG_ENDPOINT() || "", {
+      fetch("https://back-portfolio-next.vercel.app/line-msg", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
