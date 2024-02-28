@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { collection } from "./dev";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +8,11 @@ import { RootState } from "@/lib/store";
 
 export default function Page() {
   const theme = useAppSelector((state: RootState) => state.theme_.theme);
-
+  const [collect, setCollect] = useState(collection);
+  const handleFilter = (filter: string) => {
+    if (filter === "all") setCollect(collection);
+    else setCollect(collection.filter((item) => item.tag.includes(filter)));
+  };
   return (
     <div
       className=" absolute w-full h-auto top-0 left-0 lg:text-[1.5rem]"
@@ -47,7 +51,7 @@ export default function Page() {
           />
           <div className=" flex flex-col justify-end items-center">
             <h3 className=" text-[1.8rem] lg:text-[5rem] leading-none">
-              {collection.length}
+              {collect.length}
             </h3>
             <p className=" lg:text-[3rem]">Repos</p>
           </div>
@@ -147,18 +151,18 @@ export default function Page() {
         </nav>
       </div>
       <nav className=" flex w-full justify-center gap-5 p-4">
-        <button>All</button>
-        <button>Web</button>
-        <button>App</button>
-        <button>API</button>
-        <button>Tool</button>
+        <button onClick={() => handleFilter("all")}>All</button>
+        <button onClick={() => handleFilter("web")}>Web</button>
+        <button onClick={() => handleFilter("app")}>App</button>
+        <button onClick={() => handleFilter("api")}>API</button>
+        <button onClick={() => handleFilter("tool")}>Tool</button>
       </nav>
       <section className=" relative flex justify-center">
         <main
           className=" grid grid-cols-3 gap-1 lg:w-2/3"
           style={{ backgroundColor: theme.c60 }}
         >
-          {collection.map((item, index) => (
+          {collect.map((item, index) => (
             <div
               key={index}
               className=" relative aspect-square flex justify-center items-center text-[3rem] 
@@ -232,7 +236,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/css.png"}
@@ -240,7 +244,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/js.png"}
@@ -248,7 +252,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/next.png"}
@@ -256,7 +260,7 @@ const Icons = () => {
         width={70}
         alt=""
         quality={50}
-        className=" flex-none invert w-12 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none invert w-12 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/tailwind.png"}
@@ -264,7 +268,7 @@ const Icons = () => {
         width={70}
         alt=""
         quality={50}
-        className=" flex-none w-10 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-10 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/ts.png"}
@@ -272,7 +276,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/node.png"}
@@ -280,7 +284,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/mongo.png"}
@@ -288,7 +292,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/python.png"}
@@ -296,7 +300,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/wolfram.png"}
@@ -304,7 +308,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/postman.png"}
@@ -312,7 +316,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/vscode.png"}
@@ -320,7 +324,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
       <Image
         src={"/png/react.png"}
@@ -328,7 +332,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-lighten hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
       />
     </nav>
   );

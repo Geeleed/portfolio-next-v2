@@ -12,12 +12,12 @@ export default function Theme() {
   return (
     <div
       className=" absolute w-full h-full flex justify-center overflow-y-auto"
-      style={{ backgroundColor: theme.c1 }}
+      style={{ backgroundColor: theme.c60 }}
     >
       <div className=" flex flex-col items-center text-center justify-between h-full gap-5 lg:w-2/3 w-full p-5">
         <div className=" w-full lg:w-1/2 flex flex-col items-center">
           <h1
-            className=" lg:text-[5rem] text-[2rem]"
+            className=" lg:text-[4rem] text-[2rem]"
             style={{ color: theme.c10 }}
           >
             Select theme
