@@ -19,12 +19,12 @@ export default function Page() {
       style={{ backgroundColor: theme.c60, color: theme.c10 }}
     >
       <nav
-        className=" w-full px-5 py-2 text-[2rem] lg:text-[4rem] flex justify-between items-center sticky top-0 z-10 lg:px-[16.5%]"
+        className=" w-full px-5 py-2 text-[2rem] lg:text-[3rem] flex justify-between items-center sticky top-0 z-10 lg:px-[16.5%]"
         style={{ backgroundColor: theme.c1, color: theme.c30 }}
       >
         <div className=" leading-none">
           <h3>Surasak Kaewpho</h3>
-          <h4 className=" text-[1.1rem] lg:text-[2rem]">Portfolio</h4>
+          <h4 className=" text-[1.1rem] lg:text-[1.5rem]">Portfolio</h4>
         </div>
         {/* <Link href={"/add"}>
           <svg
@@ -50,20 +50,20 @@ export default function Page() {
             className=" rounded-full w-40 h-40 lg:w-1/4 lg:h-1/4"
           />
           <div className=" flex flex-col justify-end items-center">
-            <h3 className=" text-[1.8rem] lg:text-[5rem] leading-none">
+            <h3 className=" text-[1.8rem] lg:text-[4rem] leading-none">
               {collect.length}
             </h3>
-            <p className=" lg:text-[3rem]">Repos</p>
+            <p className=" lg:text-[2rem]">Repos</p>
           </div>
           <Link
             href={"https://github.com/Geeleed"}
             target="_blank"
             className=" flex flex-col justify-end items-center"
           >
-            <div className=" lg:h-[5rem]">
+            <div className=" lg:h-[4rem]">
               <GitHub />
             </div>
-            <p className=" lg:text-[3rem]">Geeleed</p>
+            <p className=" lg:text-[2rem]">Geeleed</p>
           </Link>
           <Link
             href={"/theme"}
@@ -84,20 +84,20 @@ export default function Page() {
               width="28"
               height="28"
               fill="currentColor"
-              className="bi bi-palette lg:h-[5rem] lg:w-[5rem]"
+              className="bi bi-palette lg:h-[4rem] lg:w-[4rem]"
               viewBox="0 0 16 16"
             >
               <path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
               <path d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8m-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.148.904.083.991.024C14.717 9.38 15 9.161 15 8a7 7 0 1 0-7 7" />
             </svg>
-            <p className=" lg:text-[3rem]">Theme</p>
+            <p className=" lg:text-[2rem]">Theme</p>
           </Link>
         </section>
       </div>
 
       <div className=" flex w-full justify-center">
         <article
-          className=" px-5 py-3 rounded-md text-[0.8rem] lg:w-2/3 lg:text-[1.5rem]"
+          className=" px-5 py-2 rounded-md text-[0.8rem] lg:w-2/3 lg:text-[1.3rem]"
           style={{ backgroundColor: theme.c60 }}
         >
           <p className=" py-2">
@@ -236,7 +236,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/css.png"}
@@ -244,7 +244,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/js.png"}
@@ -252,7 +252,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/next.png"}
@@ -260,7 +260,7 @@ const Icons = () => {
         width={70}
         alt=""
         quality={50}
-        className=" flex-none invert w-12 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none invert w-12 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/tailwind.png"}
@@ -268,7 +268,7 @@ const Icons = () => {
         width={70}
         alt=""
         quality={50}
-        className=" flex-none w-10 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-10 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/ts.png"}
@@ -276,7 +276,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/node.png"}
@@ -284,7 +284,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/mongo.png"}
@@ -292,7 +292,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/python.png"}
@@ -300,7 +300,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/wolfram.png"}
@@ -308,7 +308,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/postman.png"}
@@ -316,7 +316,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/vscode.png"}
@@ -324,7 +324,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
       <Image
         src={"/png/react.png"}
@@ -332,7 +332,7 @@ const Icons = () => {
         width={30}
         alt=""
         quality={50}
-        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:scale-125"
+        className=" flex-none w-8 h-8 grayscale mix-blend-hard-light hover:grayscale-0 hover:mix-blend-normal hover:scale-125"
       />
     </nav>
   );
