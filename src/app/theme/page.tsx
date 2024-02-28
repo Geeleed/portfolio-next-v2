@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { clpl } from "../kaewpho/dev";
 import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { RootState } from "@/lib/store";
 import { setTheme } from "@/lib/slices/themeSlice";
+import { clpl } from "../dev";
 
 export default function Theme() {
   const theme = useAppSelector((state: RootState) => state.theme_.theme);
@@ -58,7 +58,7 @@ export default function Theme() {
           </div>
         </div>
         <Link
-          href={"/kaewpho"}
+          href={"/"}
           className=" text-center p-2 text-[1.5rem] rounded-md lg:w-1/2 w-full"
           style={{ backgroundColor: theme.c30 }}
         >

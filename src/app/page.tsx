@@ -121,7 +121,8 @@ export default function Page() {
       </div>
       <div className=" flex justify-center">
         <nav className=" w-full flex justify-between gap-1 my-1 lg:w-2/3">
-          <button
+          <Link
+            href={"/pdf/WebDevResume.pdf"}
             className=" border-2 w-full py-1 transition-all active:scale-95 hover:opacity-75"
             style={{
               backgroundColor: theme.c10,
@@ -130,7 +131,7 @@ export default function Page() {
             }}
           >
             Resume
-          </button>
+          </Link>
           <Link
             href={"/message"}
             className=" border-2 text-center w-full py-1 transition-all active:scale-95 hover:opacity-75"

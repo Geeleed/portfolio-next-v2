@@ -4,6 +4,7 @@ import { RootState } from "@/lib/store";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useRef } from "react";
+import { SEND_MSG_ENDPOINT } from "./actions";
 
 export default function Message() {
   const theme = useAppSelector((state: RootState) => state.theme_.theme);
@@ -17,7 +18,7 @@ export default function Message() {
         title: senderRef.current?.value,
         text: msgRef.current?.value,
       };
-      fetch(process.env.SEND_MSG_ENDPOINT || "", {
+      fetch(SEND_MSG_ENDPOINT() || "", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

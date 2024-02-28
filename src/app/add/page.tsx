@@ -65,7 +65,7 @@ export default function Add() {
           Submit
         </button>
         <Link
-          href={"/kaewpho"}
+          href={"/"}
           className=" text-center p-2 text-[1.5rem] rounded-md hover:opacity-90"
           style={{ backgroundColor: theme.c30 }}
         >
