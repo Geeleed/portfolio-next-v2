@@ -41,7 +41,7 @@ export default function Page() {
         </Link> */}
       </nav>
       <div className=" w-full flex justify-center my-5">
-        <section className=" w-full h-full lg:w-2/3 p-5 lg:px-0 flex items-center justify-between text-[0.8rem]">
+        <section className=" w-full h-full lg:w-2/3 p-5 lg:px-0 flex items-center justify-between lg:justify-evenly text-[0.8rem]">
           <Image
             src={"/png/disk.png"}
             height={800}
