@@ -21,6 +21,14 @@ export const clpl: any = {
 
 export const collection = [
   {
+    source: "https://github.com/Geeleed/front-page-netflix/",
+    demo: "https://front-page-netflix.vercel.app/",
+    image_src: "/png/app/rgb/netflix.png",
+    title: "Clone Netflix",
+    tag: ["web"],
+    detail: "Clone หน้าเว็บหลักของ Netflix ด้วย Next.js",
+  },
+  {
     source: "https://github.com/Geeleed/caplink",
     demo: "https://caplink.vercel.app/",
     image_src: "/png/app/rgb/caplink.png",
