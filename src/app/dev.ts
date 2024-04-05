@@ -21,6 +21,15 @@ export const clpl: any = {
 
 export const collection = [
   {
+    source: "https://github.com/Geeleed/geeleed-hotel/",
+    demo: "https://geeleed-hotel.vercel.app/",
+    image_src: "/png/app/rgb/hotel.png",
+    title: "Geeleed Hotel",
+    tag: ["web", "app"],
+    detail:
+      "เว็บจองโรงแรม มีระบบชำระเงินใช้ stripe ระบบแอดมินสำหรับจัดการห้องเบื้องต้น ใช้ฐานข้อมูล mongodb",
+  },
+  {
     source: "https://github.com/Geeleed/front-page-netflix/",
     demo: "https://front-page-netflix.vercel.app/",
     image_src: "/png/app/rgb/netflix.png",
