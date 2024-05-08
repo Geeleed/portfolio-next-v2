@@ -21,6 +21,15 @@ export const clpl: any = {
 
 export const collection = [
   {
+    source: "https://github.com/Geeleed/winwin-front-end/",
+    demo: "https://winwin-front-end.vercel.app/",
+    image_src: "/png/app/rgb/winwin.png",
+    title: "WINWIN",
+    tag: ["web", "app"],
+    detail:
+      "เว็บประกาศแลกของมือสอง คล้ายแอปหาคู่แต่เป็นการแมตช์กันของของมือสอง ใช้ฐานข้อมูล postgresql",
+  },
+  {
     source: "https://github.com/Geeleed/geeleed-hotel/",
     demo: "https://geeleed-hotel.vercel.app/",
     image_src: "/png/app/rgb/hotel.png",
