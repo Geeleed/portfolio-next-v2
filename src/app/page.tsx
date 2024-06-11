@@ -108,12 +108,14 @@ export default function Page() {
           <p className=" py-2">
             {`I focus on Next.js to develop the PWAs, use Typescript for logic and
           Tailwind CSS for styling, manage the state by Redux Toolkit, develop
-          restApi and connect the mongodb by Express.js/FastApi.`}
+          backend by node.js/python`}
           </p>
-          <ul className=" flex justify-around lg:justify-start lg:gap-5">
+          <ul className=" flex justify-start gap-x-2 lg:justify-start lg:gap-5 flex-wrap">
             <li>✓ NextJS</li>
             <li>✓ PWAs</li>
+            <li>✓ NodeJS</li>
             <li>✓ APIs</li>
+            <li>✓ PostgreSQL</li>
             <li>✓ MongoDB</li>
             <li>✓ Redux</li>
             <li>✓ AI</li>
@@ -254,7 +256,7 @@ export default function Page() {
       </section>
       <section className=" flex justify-center mt-16">
         <main className=" w-[80rem] flex flex-col items-center">
-          <h1 className=" text-[3rem]">UI showcase</h1>
+          <h1 className=" text-[2rem]">UI showcase</h1>
           <div className=" w-full my-5 rounded-lg overflow-hidden">
             <CardShow />
           </div>
