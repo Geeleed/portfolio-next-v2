@@ -25,7 +25,7 @@ export const collection = [
     demo: "https://winwin-front-end.vercel.app/",
     image_src: "/png/app/rgb/winwin.png",
     title: "WINWIN",
-    tag: ["web", "app"],
+    tag: ["web", "app", "highlight"],
     detail:
       "เว็บประกาศแลกของมือสอง คล้ายแอปหาคู่แต่เป็นการแมตช์กันของของมือสอง ใช้ฐานข้อมูล postgresql",
   },
@@ -34,7 +34,7 @@ export const collection = [
     demo: "https://geeleed-hotel.vercel.app/",
     image_src: "/png/app/rgb/hotel.png",
     title: "Geeleed Hotel",
-    tag: ["web", "app"],
+    tag: ["web", "app", "highlight"],
     detail:
       "เว็บจองโรงแรม มีระบบชำระเงินใช้ stripe ระบบแอดมินสำหรับจัดการห้องเบื้องต้น ใช้ฐานข้อมูล mongodb",
   },
@@ -43,7 +43,7 @@ export const collection = [
     demo: "https://front-page-netflix.vercel.app/",
     image_src: "/png/app/rgb/netflix.png",
     title: "Clone Netflix",
-    tag: ["web"],
+    tag: ["web", "highlight"],
     detail: "Clone หน้าเว็บหลักของ Netflix ด้วย Next.js",
   },
   {
@@ -77,7 +77,7 @@ export const collection = [
     demo: "https://sticky-note-blue.vercel.app/",
     image_src: "/png/app/rgb/sticky_note.png",
     title: "Sticky Note",
-    tag: ["app"],
+    tag: ["app", "highlight"],
     detail:
       "application สำหรับจดโน็ต มีกระดาษให้เลือกหลายสี มีฟอนต์ให้เลือก เพิ่ม tag ที่ต้องการได้ ประทับตราเสร็จงานได้",
   },
@@ -86,7 +86,7 @@ export const collection = [
     demo: "https://diary-app-weld-phi.vercel.app/",
     image_src: "/png/app/rgb/diary.png",
     title: "Diary",
-    tag: ["app"],
+    tag: ["app", "highlight"],
     detail:
       "application สำหรับจดบันทึกประจำวัน เพิ่มภาพได้ ระบบมีการเชื่อมต่อฐานข้อมูล mongodb และเชื่อมต่อ api Gemini ซึ่งเป็น generative AI ของ google ได้นำมาใช้เป็นเพื่อนคอยสรุปเรื่องราวในชีวิตแต่ละวัน",
   },
@@ -136,7 +136,7 @@ export const collection = [
     demo: "https://restaurant-landing-page-smoky.vercel.app/",
     image_src: "/png/app/rgb/rest.png",
     title: "Restaurant",
-    tag: ["web"],
+    tag: ["web", "highlight"],
     detail: "Landing page เบื้องต้นที่ใช้ react.js ในการพัฒนา",
   },
 

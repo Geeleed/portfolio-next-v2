@@ -1,17 +1,22 @@
 "use client";
-import React, { useState } from "react";
-import { collection } from "./dev";
+import React, { useEffect, useState } from "react";
+import { clpl, collection } from "./dev";
 import Image from "next/image";
 import Link from "next/link";
 import { useAppSelector } from "@/lib/hooks";
 import { RootState } from "@/lib/store";
+import CardShow from "./ui/card/CardShow";
 
 export default function Page() {
   const theme = useAppSelector((state: RootState) => state.theme_.theme);
-  const [collect, setCollect] = useState(collection);
+  const [clicked, setClicked] = useState("highlight");
+  const [collect, setCollect] = useState(
+    collection.filter((i) => i.tag.includes("highlight"))
+  );
   const handleFilter = (filter: string) => {
     if (filter === "all") setCollect(collection);
     else setCollect(collection.filter((item) => item.tag.includes(filter)));
+    setClicked(filter);
   };
   return (
     <div
@@ -127,7 +132,7 @@ export default function Page() {
         <nav className=" w-full flex justify-between gap-1 my-1 lg:w-2/3">
           <Link
             // href={"/pdf/WebDevResume.pdf"}
-            href={"/pdf/Resume-v3.pdf"}
+            href={"/pdf/WebDevResume3.pdf"}
             download={true}
             className=" text-center border-2 w-full py-1 transition-all active:scale-95 hover:opacity-75"
             style={{
@@ -152,11 +157,48 @@ export default function Page() {
         </nav>
       </div>
       <nav className=" flex w-full justify-center gap-5 p-4">
-        <button onClick={() => handleFilter("all")}>All</button>
-        <button onClick={() => handleFilter("web")}>Web</button>
-        <button onClick={() => handleFilter("app")}>App</button>
-        <button onClick={() => handleFilter("api")}>API</button>
-        <button onClick={() => handleFilter("tool")}>Tool</button>
+        <button
+          className=" hover:underline underline-offset-4"
+          style={{ color: clicked === "highlight" ? theme.c30 : theme.c10 }}
+          onClick={() => handleFilter("highlight")}
+        >
+          Highlight
+        </button>
+        <button
+          className=" hover:underline underline-offset-4"
+          style={{ color: clicked === "all" ? theme.c30 : theme.c10 }}
+          onClick={() => handleFilter("all")}
+        >
+          All
+        </button>
+        <button
+          className=" hover:underline underline-offset-4"
+          style={{ color: clicked === "web" ? theme.c30 : theme.c10 }}
+          onClick={() => handleFilter("web")}
+        >
+          Web
+        </button>
+        <button
+          className=" hover:underline underline-offset-4"
+          style={{ color: clicked === "app" ? theme.c30 : theme.c10 }}
+          onClick={() => handleFilter("app")}
+        >
+          App
+        </button>
+        <button
+          className=" hover:underline underline-offset-4"
+          style={{ color: clicked === "api" ? theme.c30 : theme.c10 }}
+          onClick={() => handleFilter("api")}
+        >
+          API
+        </button>
+        <button
+          className=" hover:underline underline-offset-4"
+          style={{ color: clicked === "tool" ? theme.c30 : theme.c10 }}
+          onClick={() => handleFilter("tool")}
+        >
+          Tool
+        </button>
       </nav>
       <section className=" relative flex justify-center">
         <main
@@ -210,6 +252,37 @@ export default function Page() {
           ))}
         </main>
       </section>
+      <section className=" flex justify-center mt-16">
+        <main className=" w-[80rem] flex flex-col items-center">
+          <h1 className=" text-[3rem]">UI showcase</h1>
+          <div className=" w-full my-5 rounded-lg overflow-hidden">
+            <CardShow />
+          </div>
+        </main>
+      </section>
+      <footer
+        className=" flex flex-col gap-1 py-3 justify-center items-center"
+        style={{ backgroundColor: theme.c1, color: theme.c30 }}
+      >
+        <Link
+          className=" hover:underline underline-offset-4"
+          href="mailto:surasak.kwork@gmail.com"
+        >
+          {"surasak.kwork@gmail.com"}
+        </Link>
+        <Link
+          className=" hover:underline underline-offset-4"
+          href="tel:0929124025"
+        >
+          {"092-912-4025"}
+        </Link>
+        <Link
+          className=" hover:underline underline-offset-4"
+          href={"https://github.com/Geeleed"}
+        >
+          {"https://github.com/Geeleed"}
+        </Link>
+      </footer>
     </div>
   );
 }
