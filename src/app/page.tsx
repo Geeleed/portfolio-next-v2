@@ -126,7 +126,8 @@ export default function Page() {
       <div className=" flex justify-center">
         <nav className=" w-full flex justify-between gap-1 my-1 lg:w-2/3">
           <Link
-            href={"/pdf/WebDevResume.pdf"}
+            // href={"/pdf/WebDevResume.pdf"}
+            href={"/pdf/Resume-v3.pdf"}
             download={true}
             className=" text-center border-2 w-full py-1 transition-all active:scale-95 hover:opacity-75"
             style={{
