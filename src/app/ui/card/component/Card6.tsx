@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import Image from "./MyImage";
 
 export default function Card6() {
   const [ms, setMs] = useState([0]);

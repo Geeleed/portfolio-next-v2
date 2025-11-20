@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { clpl, collection } from "./dev";
-import Image from "next/image";
 import Link from "next/link";
 import { useAppSelector } from "@/lib/hooks";
 import { RootState } from "@/lib/store";
 import CardShow from "./ui/card/CardShow";
+import Image from "./ui/card/component/MyImage";
 
 export default function Page() {
   const theme = useAppSelector((state: RootState) => state.theme_.theme);
@@ -29,7 +29,7 @@ export default function Page() {
       >
         <div className=" leading-none">
           <h3>Surasak Kaewpho</h3>
-          <h4 className=" text-[1.1rem] lg:text-[1.5rem]">Portfolio</h4>
+          <h4 className=" text-[1.1rem] lg:text-[1.5rem]">Portfolio (2024)</h4>
         </div>
         {/* <Link href={"/add"}>
           <svg
@@ -102,7 +102,7 @@ export default function Page() {
 
       <div className=" flex w-full justify-center">
         <article
-          className=" px-5 py-2 rounded-md text-[0.8rem] lg:w-2/3 lg:text-[1.3rem]"
+          className=" px-5 py-2 rounded-md text-[0.8rem] max-[768px]:w-full lg:w-2/3 lg:text-[1.3rem]"
           style={{ backgroundColor: theme.c60 }}
         >
           <p className=" py-2">

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React from "react";
+import Image from "./MyImage";
 
 export default function Card9() {
   return (
